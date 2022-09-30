@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  dev-db:
+    image: postgres:13
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: postgres
+      POSTGRES_DB: nest
+    ports:
+      - 5434:5432
+    networks:
+      - freecodecamp
+networks:
+  freecodecamp:
